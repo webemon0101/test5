@@ -3,7 +3,7 @@ var displayElm = document.getElementsByClassName('display')[0];
 var timer = null;
 startButton.addEventListener('click', function(){
     if(timer===null){
-        navigator.vibrate(10); 
+        navigator.vibrate(30); 
         var seconds = 0;
         timer = setInterval(function(){
             seconds++;
@@ -21,7 +21,7 @@ startButton.addEventListener('click', function(){
 var stopButton = document.getElementsByClassName('stopButton')[0];
 stopButton.addEventListener('click', function(){
     if(timer!==null){
-        navigator.vibrate(10); 
+        navigator.vibrate(30); 
         clearInterval(timer);
         timer=null;
     }
