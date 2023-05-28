@@ -3,6 +3,7 @@ var displayElm = document.getElementsByClassName('display')[0];
 var timer = null;
 startButton.addEventListener('click', function(){
     if(timer===null){
+        window.navigator.webkitVibrate([200]); 
         var seconds = 0;
         timer = setInterval(function(){
             seconds++;
