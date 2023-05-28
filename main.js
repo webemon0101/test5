@@ -6,7 +6,12 @@ startButton.addEventListener('click', function(){
         var seconds = 0;
         timer = setInterval(function(){
             seconds++;
-            displayElm.innerHTML=parseInt(seconds/100)+'.'+seconds%100;
+            var under=seconds%100;
+            var underp;
+            if (under==0)underp='00';
+            else if(under>=1&&under<=9)underp='0'+under;
+            else underp=under;
+            displayElm.innerHTML=parseInt(seconds/100)+'.'+underp;
         },10);
     }
     
